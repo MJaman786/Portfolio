@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../styles/project.css">
+</head>
+
+<body>
+    <header class="h-navbar">
+        <h1>My Portfolio</h1>
+        <div class="tog" onclick="toggleMenu()">
+            <div class="line l-1"></div>
+            <div class="line l-2"></div>
+            <div class="line l-3"></div>
+        </div>
+    </header>
+    <div class="sidebar" id="sidebar">
+        <ul class="p-1">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+        <div class="p2">
+            <li><a href="https://github.com/MJaman786" target="_blank"><i class="fa-brands fa-square-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/aman-mujawar-b717a3289/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/amanmujawar064/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        </div>
+    </div>
+    <!-- Project Content -->
+    <div class="container">
+        <div class="con">
+            <h3>Ecommerce-Website</h3>
+            <a href="https://mjaman786.github.io/Ecommerce-Website-miniproject-/" target="_blank"><button>Click</button></a>
+        </div>
+        <div class="con">
+            <h3>ToDo App</h3>
+            <a href="https://mjaman786.github.io/ToDo-List/" target="_blank"><button>Click</button></a>
+        </div>
+        <div class="con">
+            <h3>Calculator App</h3>
+            <a href="https://mjaman786.github.io/Calculator-miniproject-/" target="_blank"><button>Click</button></a>
+        </div>
+        <div class="con">
+            <h3>Rock-Paper-Seasor Game</h3>
+            <a href="https://mjaman786.github.io/RockPaperSeasor-GAME/" target="_blank"><button>Click</button></a>
+        </div>
+        <div class="con">
+            <h3>Cricket Summary Game</h3>
+            <a href=" https://mjaman786.github.io/CricketSummary-miniproject-/" target="_blank"><button>Click</button></a>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const tog = document.querySelector('.tog');
+    sidebar.classList.toggle('show');
+    tog.classList.toggle('toggle');
+}
+
+var typedH1 = new Typed(".auto-type-h1", {
+    strings: ["Aman Mujawar"],
+    typeSpeed: 80,
+    backSpeed: 50,
+    loop: false,
+    onComplete: (self) => {
+        self.cursor.remove();
+    }
+});
+
+var typedP = new Typed(".auto-type-p", {
+    strings: ["My skills include", "Frontend Developer", "DSA", "OOP's"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true,
+    onComplete: (self) => {
+        self.cursor.remove();
+    }
+});
+
+    </script>
+</body>
+
+</html>
